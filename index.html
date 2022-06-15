@@ -13,7 +13,7 @@
         <img class="logo" src="img/LOGO.png" onclick="openPage('gallery')" />
         <div class="header-btn-container">
           <button class="header-btn btn-gallery active" onclick="openPage('gallery')">Gallery</button>
-          <button class="header-btn btn-editor" onclick="openPage('editor')">Editor</button>
+          <button class="header-btn btn-meme" onclick="openPage('meme')">Meme</button>
           <button class="header-btn btn-about" onclick="openPage('about')">About</button>
       </header>
 
@@ -21,9 +21,9 @@
         <section id="gallery" class="img-gallery container grid"></section>
       </main>
 
-      <main class="editor-container">
+      <main class="meme-container">
         <div class="canvas-container">
-          <canvas id="editor-canvas" height="500" width="500"></canvas>
+          <canvas id="meme-canvas" height="500" width="500"></canvas>
         </div>
         <section class="edit-settings-container flex column">
           <input class="input-meme-text" type="text" value="Your Text Here" onkeyup="onSetText(this.value)"/>

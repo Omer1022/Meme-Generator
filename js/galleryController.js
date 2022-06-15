@@ -4,7 +4,7 @@ let gCanvas;
 let gCtx;
 
 function init() {
-  gCanvas = document.querySelector("#editor-canvas");
+  gCanvas = document.querySelector("#meme-canvas");
   gCtx = gCanvas.getContext("2d");
   renderImgs();
   renderMemes();
@@ -32,22 +32,22 @@ function renderMemes() {
 
 function openPage(pageName) {
   var galleryDisplay = "none";
-  var editorDisplay = "none";
+  var memeDisplay = "none";
   switch (pageName) {
     case "gallery":
       var galleryDisplay = "flex";
       addActive(document.querySelector(".btn-gallery"));
       renderImgs();
       break;
-    case "editor":
-      var editorDisplay = "flex";
-      addActive(document.querySelector(".btn-editor"));
+    case "meme":
+      var memeDisplay = "flex";
+      addActive(document.querySelector(".btn-meme"));
       break;
     default:
       break;
   }
   document.querySelector(".gallery-container").style.display = galleryDisplay;
-  document.querySelector(".editor-container").style.display = editorDisplay;
+  document.querySelector(".meme-container").style.display = memeDisplay;
 }
 
 function renderImgByStr(str) {

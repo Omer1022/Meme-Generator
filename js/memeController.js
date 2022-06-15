@@ -1,7 +1,7 @@
 "use strict";
 
 function openCanvas(imgId) {
-  openPage("editor");
+  openPage("meme");
   resizeCanvas();
   createMeme(imgId);
   renderCanvas();
