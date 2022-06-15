@@ -1,0 +1,24 @@
+/* IMAGE GALLERY */
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-gallery {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: center;
+  gap: 10px;
+}
+
+.img-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 1px #0000004f;
+}
+
+.img-gallery img:hover {
+  box-shadow: 0px 0px 3px 1px #ffffff94;
+}
