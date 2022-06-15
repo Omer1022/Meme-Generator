@@ -1,0 +1,24 @@
+.header-btn-container > * {
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 0.5rem;
+  border: none;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.header-btn-container > *:hover {
+  background-color: white;
+  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+  color: #00a846;
+}
+
+.logo {
+  height: 20px;
+  min-width: 100px;
+  padding-inline-start: 20px;
+  cursor: pointer;
+}

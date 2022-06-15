@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #22252c;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif,
+    sans-serif;
+}
+
+header {
+  background-color: #5970c1;
+  background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+img {
+  object-fit: cover;
+}
+
+main {
+  border-radius: 5px;
+}
