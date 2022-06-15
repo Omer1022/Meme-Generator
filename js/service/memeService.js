@@ -14,7 +14,7 @@ function createMeme(imgId) {
     isPrint: false,
     lines: [
       {
-        txt: " ",
+        txt: "Text",
         size: 40,
         align: "center",
         color: "white",
@@ -38,7 +38,7 @@ function setText(txt) {
 function addLine() {
   gMeme.selectedLineIdx++;
   var newLine = {
-    txt: "Your Text Here",
+    txt: "Text",
     size: 40,
     align: "center",
     color: "white",

@@ -36,12 +36,10 @@ function openPage(pageName) {
   switch (pageName) {
     case "gallery":
       var galleryDisplay = "flex";
-      addActive(document.querySelector(".btn-gallery"));
       renderImgs();
       break;
     case "meme":
       var memeDisplay = "flex";
-      addActive(document.querySelector(".btn-meme"));
       break;
     default:
       break;
@@ -53,12 +51,4 @@ function openPage(pageName) {
 function renderImgByStr(str) {
   var key = str.toLowerCase();
   renderImgs(key);
-}
-
-function addActive(elBtn) {
-  var elBtns = document.querySelectorAll(".header-btn");
-  elBtns.forEach(function (elBtn) {
-    elBtn.classList.remove("active");
-  });
-  elBtn.classList.add("active");
 }

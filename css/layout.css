@@ -3,7 +3,7 @@
   padding: 0px 5px;
 }
 
-.setting-btn {
+.edit-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
   cursor: pointer;
 }
 
-.setting-btn:hover {
+.edit-btn:hover {
   position: relative;
   top: 2px;
   box-shadow: 0px 0px 0 rgba(92, 92, 92, 0.55),

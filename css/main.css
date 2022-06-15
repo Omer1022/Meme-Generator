@@ -3,6 +3,7 @@
 @import "./typography.css";
 @import "./layout.css";
 @import "./helpers.css";
+@import "./buttons.css";
 
 /* COMPONENTS */
 @import "./header.css";

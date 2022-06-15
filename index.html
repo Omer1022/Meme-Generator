@@ -12,7 +12,7 @@
       <header class="flex">
         <img class="logo" src="img/LOGO.png" onclick="openPage('gallery')" />
         <div class="header-btn-container">
-          <button class="header-btn btn-gallery active" onclick="openPage('gallery')">Gallery</button>
+          <button class="header-btn btn-gallery" onclick="openPage('gallery')">Gallery</button>
           <button class="header-btn btn-meme" onclick="openPage('meme')">Meme</button>
           <button class="header-btn btn-about" onclick="openPage('about')">About</button>
       </header>
@@ -27,27 +27,27 @@
         </div>
         <section class="edit-settings-container flex column">
           <input class="input-meme-text" type="text" value="Your Text Here" onkeyup="onSetText(this.value)"/>
-          <div class="line-setting-btn-container flex">
-            <button class="setting-btn btn-switch" onclick="onSwitchLine()">
+          <div class="line-edit-btn-container flex">
+            <button class="edit-btn btn-switch" onclick="onSwitchLine()">
               <img src="img/switch.png" />
             </button>
-            <button class="setting-btn btn-add" onclick="onAddLine()">+</button>
-            <button class="setting-btn btn-remove" onclick="onRemoveLine()">
+            <button class="edit-btn btn-add" onclick="onAddLine()">+</button>
+            <button class="edit-btn btn-remove" onclick="onRemoveLine()">
               <img src="img/remove.png" />
             </button>
           </div>
-          <div class="text-setting-btn-container grid">
-            <button class="setting-btn btn-txt-size-up" onclick="onChangeFontSize(+1)">A+</button>
-            <button class="setting-btn btn-txt-size-down" onclick="onChangeFontSize(-1)">A-</button>
-            <button class="setting-btn btn-txt-left" onclick="onChangeTextPosX(-1)">←</button>
-            <button class="setting-btn btn-txt-up" onclick="onChangeTextPosY(-1)">↑</button>
-            <button class="setting-btn btn-txt-down" onclick="onChangeTextPosY(+1)">↓</button>
-            <button class="setting-btn btn-txt-right" onclick="onChangeTextPosX(+1)">→</button>
-            <button class="setting-btn btn-align-left" onclick="onSetTextAlign('right')">
+          <div class="text-edit-btn-container grid">
+            <button class="edit-btn btn-txt-size-up" onclick="onChangeFontSize(+1)">A+</button>
+            <button class="edit-btn btn-txt-size-down" onclick="onChangeFontSize(-1)">A-</button>
+            <button class="edit-btn btn-txt-left" onclick="onChangeTextPosX(-1)">←</button>
+            <button class="edit-btn btn-txt-up" onclick="onChangeTextPosY(-1)">↑</button>
+            <button class="edit-btn btn-txt-down" onclick="onChangeTextPosY(+1)">↓</button>
+            <button class="edit-btn btn-txt-right" onclick="onChangeTextPosX(+1)">→</button>
+            <button class="edit-btn btn-align-left" onclick="onSetTextAlign('right')">
             <img src="img/btn-align-left.png" /></button>
-            <button class="setting-btn btn-align-center" onclick="onSetTextAlign('center')">
+            <button class="edit-btn btn-align-center" onclick="onSetTextAlign('center')">
               <img src="img/btn-align-center.png"/></button>
-            <button class="setting-btn btn-align-right" onclick="onSetTextAlign('left')">
+            <button class="edit-btn btn-align-right" onclick="onSetTextAlign('left')">
               <img src="img/btn-align-right.png" />
             </button>
             <select class="font-select" name="font" onchange="onSetFont(this.value)">
@@ -55,11 +55,13 @@
               <option value="poppins">Poppins</option>
             </select>
           </div>
-            <button class="share-btn setting-btn">Share</button>
+          <div class="social-btn flex">
+            <button class="share-btn edit-btn">Share</button>
             <a href="#" 
-            class="download-btn setting-btn"
+            class="download-btn edit-btn"
             onclick="onDownloadImg(this)"
             download="my-meme.jpg">Download</a>
+          </div>
         </section>
       </main>
       <main class="meme-container container">
