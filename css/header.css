@@ -1,6 +1,6 @@
 .logo {
   height: 20px;
   min-width: 100px;
-  padding-inline-start: 20px;
   cursor: pointer;
+  margin-left: 75px;
 }

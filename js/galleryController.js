@@ -16,7 +16,7 @@ function renderImgs(key) {
 }
 
 function renderMemes() {
-  var memes = loadMemes();
+  var memes = getMeme();
   if (!memes) return;
 
   var strHTMLs = memes.map(function (meme) {

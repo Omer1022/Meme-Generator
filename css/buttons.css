@@ -3,15 +3,22 @@
   border-radius: 20px;
   background-color: transparent;
   color: white;
-  font-weight: 500;
   font-size: 20px;
   border: none;
-  text-align: left;
 }
 
 .header-btn-container > *:hover {
   background-color: white;
   color: #00a846;
+}
+
+.header-btn.btn-meme {
+  margin-left: 50px;
+}
+
+.header-btn.btn-about {
+  margin-right: 75px;
+  margin-left: 50px;
 }
 
 .line-edit-btn-container {
@@ -61,9 +68,10 @@
 
 .share-btn {
   font-family: Poppins-Regular;
+  text-decoration: none;
   float: left;
-  width: 180px;
-  height: 50px;
+  width: 190px;
+  height: 45px;
   color: white;
   font-size: 21px;
   box-shadow: 1px 6px 0 #165c9c;
@@ -82,8 +90,8 @@
 .download-btn {
   font-family: Poppins-Regular;
   float: right;
-  width: 180px;
-  height: 50px;
+  width: 190px;
+  height: 45px;
   color: white;
   font-size: 21px;
   text-decoration: none;

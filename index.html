@@ -13,7 +13,7 @@
         <img class="logo" src="img/LOGO.png" onclick="openPage('gallery')" />
         <div class="header-btn-container">
           <button class="header-btn btn-gallery" onclick="openPage('gallery')">Gallery</button>
-          <button class="header-btn btn-meme" onclick="openPage('meme')">Meme</button>
+          <button class="header-btn btn-meme" onclick="openPage('meme')">Memes</button>
           <button class="header-btn btn-about" onclick="openPage('about')">About</button>
       </header>
 
@@ -23,10 +23,11 @@
 
       <main class="meme-container">
         <div class="canvas-container">
-          <canvas id="meme-canvas" height="500" width="500"></canvas>
+          <canvas id="meme-canvas" height="400" width="400"></canvas>
         </div>
         <section class="edit-settings-container flex column">
-          <input class="input-meme-text" type="text" value="Your Text Here" onkeyup="onSetText(this.value)"/>
+          <input class="input-meme-text" type="text" value="Text 1" onkeyup="onSetText(this.value)"/>
+        </br>
           <div class="line-edit-btn-container flex">
             <button class="edit-btn btn-switch" onclick="onSwitchLine()">
               <img src="img/switch.png" />
@@ -36,33 +37,60 @@
               <img src="img/remove.png" />
             </button>
           </div>
+        </br>
           <div class="text-edit-btn-container grid">
-            <button class="edit-btn btn-txt-size-up" onclick="onChangeFontSize(+1)">A+</button>
-            <button class="edit-btn btn-txt-size-down" onclick="onChangeFontSize(-1)">A-</button>
-            <button class="edit-btn btn-align-left" onclick="onSetTextAlign('right')">
+            <button class="edit-btn btn-txt-size-up" onclick="onChangeFontSize(+1)">
+              <img src="img/btn-A+.png" /></button>
+            <button class="edit-btn btn-txt-size-down" onclick="onChangeFontSize(-1)">
+              <img src="img/btn-A-.png" /></button>
+            <button class="edit-btn btn-align-left" onclick="onSetTextAlign({ x: 75, y: 50 })">
             <img src="img/btn-align-left.png" /></button>
-            <button class="edit-btn btn-align-center" onclick="onSetTextAlign('center')">
+            <button class="edit-btn btn-align-center" onclick="onSetTextAlign({ x: 200, y: 50 })">
               <img src="img/btn-align-center.png"/></button>
-            <button class="edit-btn btn-align-right" onclick="onSetTextAlign('left')">
-              <img src="img/btn-align-right.png" />
-            </button>
+            <button class="edit-btn btn-align-right" onclick="onSetTextAlign({ x: 325, y: 50 })">
+              <img src="img/btn-align-right.png" /> </button>
             <select class="font-select" name="font" onchange="onSetFont(this.value)">
               <option value="impact">Impact</option>
               <option value="poppins">Poppins</option>
             </select>
+            <button class="edit-btn btn-change-stroke" onclick="onChangeStroke('white')">
+               <img src="img/s-bth.png" /> </button>
+              <button class="edit-btn btn-change-color" onclick="onChangeColor('red')">
+                <img src="img/btn-color.png" /> </button>
           </div>
+        </br>
           <div class="social-btn flex">
-            <button class="share-btn edit-btn">Share</button>
-            <a href="#" 
-            class="download-btn edit-btn"
-            onclick="onDownloadImg(this)"
+            <a href="#"  class="share-btn edit-btn" onclick="shareMeme(this)">Share</a>
+            <a href="#"  class="download-btn edit-btn" onclick="onDownloadImg(this)" 
             download="my-meme.jpg">Download</a>
           </div>
         </section>
       </main>
-      <main class="meme-container container">
-      </main>
-    </div>
+
+      <main class="about-container container">
+        <h1>About Meme</h1>
+        <p>
+          An Internet meme, more commonly known simply as a meme, 
+          is an idea, behavior, image, or style that is spread via the Internet, 
+          often through social media platforms. 
+        </br>
+          What is considered a meme may vary across different communities on the Internet and is subject to change over time. 
+          Traditionally, they were a concept or catchphrase, but the concept has since become broader and more multi-faceted, 
+          evolving to include more elaborate structures such as challenges, GIFs, videos, and viral sensations.
+          Internet memes are considered a part of Internet culture.
+        </br>
+          They can spread from person to person via social networks, blogs, direct email, or news sources. 
+          Instant communication on the Internet facilitates word of mouth transmission, resulting in fads and sensations that tend to grow rapidly. 
+          An example of such a fad is that of planking (lying down in public places) posting a photo of someone planking online brings attention to the fad and allows it to reach many people in little time. 
+          The Internet also facilitates the rapid evolution of memes.
+        </br>
+          One hallmark of Internet memes is the appropriation of a part of broader culture in particular, many memes use popular culture (especially in image macros of other media), 
+          which can sometimes lead to issues with copyright. 
+          Dank memes have emerged as a new form of image-macros, and many modern memes take on inclusion of surreal, nonsensical, and non-sequitur themes.
+          Colloquially, the terms meme and Internet meme are used more loosely, having become umbrella terms for any piece of quickly-consumed comedic content that may not necessarily be intended to spread or evolve.
+        </p>
+  </main>
+
     <script src="/js/galleryController.js"></script>
     <script src="/js/memeController.js"></script>
     <script src="/js/service/galleryService.js"></script>

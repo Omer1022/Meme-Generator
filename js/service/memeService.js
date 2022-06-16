@@ -14,13 +14,13 @@ function createMeme(imgId) {
     isPrint: false,
     lines: [
       {
-        txt: "Text",
+        txt: "Text 1",
         size: 40,
         align: "center",
         color: "white",
+        strokeText: "black",
         pos: { x: 200, y: 50 },
-        font: "impact",
-        isDragging: false,
+        font: "Impact",
       },
     ],
   };
@@ -47,7 +47,7 @@ function getNewLinePos(idx) {
     case 2:
       return { x: 200, y: 200 };
     default:
-      return { x: 200, y: 200 };
+      return { x: 200, y: 50 };
   }
 }
 
@@ -58,13 +58,13 @@ function setText(txt) {
 function addLine() {
   gMeme.selectedLineIdx++;
   var newLine = {
-    txt: "Text",
+    txt: "Text 2",
     size: 40,
-    align: "center",
+    textAlign: "center",
     color: "white",
+    strokeText: "black",
     pos: getNewLinePos(gMeme.lines.length),
-    font: "impact",
-    isDragging: false,
+    font: "Impact",
   };
   gMeme.lines.push(newLine);
 }
@@ -82,14 +82,24 @@ function changeFontSize(diff) {
   currLine.size += diff;
 }
 
-function setTextAlign(alignKey) {
+function setTextAlign(pos) {
   var currLine = getCurrLine();
-  currLine.align = alignKey;
+  currLine.pos = pos;
 }
 
 function setFont(font) {
   var currLine = getCurrLine();
   currLine.font = font;
+}
+
+function changeColor(color) {
+  var currLine = getCurrLine();
+  currLine.color = color;
+}
+
+function changeStroke(strokeText) {
+  var currLine = getCurrLine();
+  currLine.strokeText = strokeText;
 }
 
 function shareMeme(uploadedImgUrl) {

@@ -82,13 +82,23 @@ function onChangeFontSize(diff) {
   renderCanvas();
 }
 
-function onSetTextAlign(alignKey) {
-  setTextAlign(alignKey);
+function onSetTextAlign(pos) {
+  setTextAlign(pos);
   renderCanvas();
 }
 
 function onSetFont(font) {
   setFont(font);
+  renderCanvas();
+}
+
+function onChangeColor(color) {
+  changeColor(color);
+  renderCanvas();
+}
+
+function onChangeStroke(strokeText) {
+  changeStroke(strokeText);
   renderCanvas();
 }
 
