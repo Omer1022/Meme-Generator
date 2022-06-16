@@ -1,24 +1,22 @@
 .header-btn-container > * {
+  font-family: Poppins-Regular;
   border-radius: 20px;
   background-color: transparent;
   color: white;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
+  font-weight: 500;
+  font-size: 20px;
   border: none;
-  padding: 10px 5px;
-  cursor: pointer;
+  text-align: left;
 }
 
 .header-btn-container > *:hover {
   background-color: white;
-  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
   color: #00a846;
 }
 
 .line-edit-btn-container {
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .btn-switch {
@@ -53,11 +51,12 @@
 .text-edit-btn-container {
   border-radius: 15px;
   padding: 10px;
+  width: 100%;
   background-color: #19a59f;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
-  gap: 5px;
-  justify-items: center;
+  gap: 20px;
+  padding-inline-start: 25px;
 }
 
 .share-btn {
@@ -67,7 +66,7 @@
   height: 50px;
   color: white;
   font-size: 21px;
-  box-shadow: 1px 1px 0 #1e7cd3;
+  box-shadow: 1px 6px 0 #165c9c;
   background-image: linear-gradient(
     -38deg,
     #1e7cd3 0%,

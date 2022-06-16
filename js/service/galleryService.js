@@ -2,9 +2,9 @@
 
 var gKeywords = [
   { key: "Politic", clicks: 3 },
-  { key: "Animal", clicks: 2 },
-  { key: "Baby", clicks: 4 },
-  { key: "Movie", clicks: 8 },
+  { key: "Animal", clicks: 3 },
+  { key: "Baby", clicks: 5 },
+  { key: "Movie", clicks: 12 },
   { key: "Sport", clicks: 1 },
 ];
 
@@ -27,6 +27,12 @@ var gImgs = [
   { id: 16, url: "img/16.jpg", keywords: ["movie"] },
   { id: 17, url: "img/17.jpg", keywords: ["politic"] },
   { id: 18, url: "img/18.jpg", keywords: ["movie"] },
+  { id: 19, url: "img/19.jpg", keywords: ["movie"] },
+  { id: 20, url: "img/20.jpg", keywords: ["movie"] },
+  { id: 21, url: "img/21.jpg", keywords: ["baby"] },
+  { id: 22, url: "img/22.jpg", keywords: ["animal"] },
+  { id: 23, url: "img/23.jpg", keywords: ["movie"] },
+  { id: 24, url: "img/24.jpg", keywords: ["movie"] },
 ];
 
 function getImgStrHtml(key) {

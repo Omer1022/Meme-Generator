@@ -31,6 +31,26 @@ function getMeme() {
   return gMeme;
 }
 
+function removeLine() {
+  var currLineIdx = gMeme.selectedLineIdx;
+  if (gMeme.lines.length === 1) return;
+  gMeme.lines.splice(currLineIdx, 1);
+  gMeme.selectedLineIdx = 0;
+}
+
+function getNewLinePos(idx) {
+  switch (idx) {
+    case 0:
+      return { x: 200, y: 50 };
+    case 1:
+      return { x: 200, y: 350 };
+    case 2:
+      return { x: 200, y: 200 };
+    default:
+      return { x: 200, y: 200 };
+  }
+}
+
 function setText(txt) {
   gMeme.lines[gMeme.selectedLineIdx].txt = txt;
 }
@@ -57,26 +77,6 @@ function switchLine() {
   }
 }
 
-function removeLine() {
-  var currLineIdx = gMeme.selectedLineIdx;
-  if (gMeme.lines.length === 1) return;
-  gMeme.lines.splice(currLineIdx, 1);
-  gMeme.selectedLineIdx = 0;
-}
-
-function getNewLinePos(idx) {
-  switch (idx) {
-    case 0:
-      return { x: 200, y: 50 };
-    case 1:
-      return { x: 200, y: 350 };
-    case 2:
-      return { x: 200, y: 200 };
-    default:
-      return { x: 200, y: 200 };
-  }
-}
-
 function changeFontSize(diff) {
   var currLine = getCurrLine();
   currLine.size += diff;
@@ -90,16 +90,6 @@ function setTextAlign(alignKey) {
 function setFont(font) {
   var currLine = getCurrLine();
   currLine.font = font;
-}
-
-function ChangeTextPosY(diff) {
-  var currLine = getCurrLine();
-  currLine.pos.y += diff;
-}
-
-function ChangeTextPosX(diff) {
-  var currLine = getCurrLine();
-  currLine.pos.x += diff;
 }
 
 function shareMeme(uploadedImgUrl) {

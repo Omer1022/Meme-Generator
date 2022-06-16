@@ -5,8 +5,6 @@ function openCanvas(imgId) {
   resizeCanvas();
   createMeme(imgId);
   renderCanvas();
-  selectInput();
-  focusInput();
 }
 
 function renderCanvas() {
@@ -67,29 +65,16 @@ function onSetText(txt) {
 function onAddLine() {
   addLine();
   renderCanvas();
-  focusInput();
-}
-
-function focusInput() {
-  var elInput = document.querySelector(".input-meme-text");
-  elInput.focus();
-}
-
-function selectInput() {
-  var elInput = document.querySelector(".input-meme-text");
-  elInput.select();
 }
 
 function onSwitchLine() {
   switchLine();
   renderCanvas();
-  focusInput();
 }
 
 function onRemoveLine() {
   removeLine();
   renderCanvas();
-  focusInput();
 }
 
 function onChangeFontSize(diff) {
@@ -105,22 +90,6 @@ function onSetTextAlign(alignKey) {
 function onSetFont(font) {
   setFont(font);
   renderCanvas();
-}
-
-function onChangeTextPosY(diff) {
-  ChangeTextPosY(diff);
-  renderCanvas();
-}
-
-function onChangeTextPosX(diff) {
-  ChangeTextPosX(diff);
-  renderCanvas();
-}
-
-function removeRect() {
-  var meme = getMeme();
-  meme.isPrint = true;
-  renderCanvas(meme);
 }
 
 function onDownloadImg(elLink) {
