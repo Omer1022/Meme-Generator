@@ -33,6 +33,7 @@ function renderMemes() {
 function openPage(pageName) {
   var galleryDisplay = "none";
   var memeDisplay = "none";
+  var aboutDisplay = "none";
   switch (pageName) {
     case "gallery":
       var galleryDisplay = "flex";
@@ -41,11 +42,15 @@ function openPage(pageName) {
     case "meme":
       var memeDisplay = "flex";
       break;
+    case "about":
+      var aboutDisplay = "flex";
+      break;
     default:
       break;
   }
   document.querySelector(".gallery-container").style.display = galleryDisplay;
   document.querySelector(".meme-container").style.display = memeDisplay;
+  document.querySelector(".about-container").style.display = aboutDisplay;
 }
 
 function renderImgByStr(str) {

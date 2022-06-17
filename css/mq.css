@@ -1,0 +1,24 @@
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "canvas canvas"
+      "settings settings";
+    gap: 10px;
+  }
+
+  .canvas-container {
+    height: 100%;
+    width: 100%;
+    grid-area: canvas;
+  }
+
+  .edit-settings-conatainer {
+    height: 100%;
+    width: 100%;
+    grid-area: settings;
+  }
+}

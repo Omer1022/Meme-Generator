@@ -3,11 +3,7 @@
   color: rgb(105, 105, 105);
 }
 
-h1 {
-  color: azure;
-  text-align: center;
-}
-
 p {
-  font-size: 17px;
+  color: beige;
+  font-size: 20px;
 }
