@@ -12,6 +12,27 @@
   color: #00a846;
 }
 
+.btn-change-color {
+  background-image: url(/img/btn-color.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+.btn-change-stroke {
+  background-image: url(/img/s-bth.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+.input-color-picker {
+  visibility: hidden;
+  width: 0px;
+  padding: 0;
+  margin: 0;
+}
+
 .header-btn.btn-meme {
   margin-left: 50px;
 }

@@ -84,7 +84,7 @@ function changeFontSize(diff) {
 
 function setTextAlign(pos) {
   var currLine = getCurrLine();
-  currLine.pos = pos;
+  currLine.pos.x = pos.x;
 }
 
 function setFont(font) {
@@ -97,9 +97,9 @@ function changeColor(color) {
   currLine.color = color;
 }
 
-function changeStroke(strokeText) {
+function changeBorderColor(borderColor) {
   var currLine = getCurrLine();
-  currLine.strokeText = strokeText;
+  currLine.style.borderColor = borderColor;
 }
 
 function shareMeme(uploadedImgUrl) {

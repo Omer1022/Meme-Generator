@@ -1,5 +1,7 @@
 "use strict";
 
+var gBorderColor = "black";
+
 function openCanvas(imgId) {
   openPage("meme");
   resizeCanvas();
@@ -36,7 +38,7 @@ function setInputText() {
 
 function drawText(line, x, y) {
   gCtx.lineWidth = 3;
-  gCtx.strokeStyle = "black";
+  gCtx.strokeStyle = gBorderColor;
   gCtx.fillStyle = line.color;
   gCtx.font = `${line.size}px ${line.font}`;
   gCtx.textAlign = line.align;
@@ -48,7 +50,7 @@ function drawRect() {
   var meme = getMeme();
   if (meme.isPrint) return;
   var currLine = getCurrLine();
-  gCtx.strokeStyle = "#363636";
+  gCtx.strokeStyle = "black";
   gCtx.strokeRect(
     5,
     currLine.pos.y - currLine.size,
@@ -92,13 +94,25 @@ function onSetFont(font) {
   renderCanvas();
 }
 
-function onChangeColor(color) {
+function onChangeColor(id) {
+  var color = document.getElementById(id).value;
   changeColor(color);
   renderCanvas();
 }
 
-function onChangeStroke(strokeText) {
-  changeStroke(strokeText);
+function onChangeColorClicked() {
+  document.getElementById("tc").click();
+  renderCanvas();
+}
+
+function onChangeBorderColor(id) {
+  var borderColor = document.getElementById(id).value;
+  gBorderColor = borderColor;
+  renderCanvas();
+}
+
+function onChangeBorderClicked() {
+  document.getElementById("td").click();
   renderCanvas();
 }
 
