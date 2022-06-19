@@ -34,7 +34,6 @@ function openPage(pageName) {
   var galleryDisplay = "none";
   var memeDisplay = "none";
   var aboutDisplay = "none";
-  console.log(pageName);
   switch (pageName) {
     case "gallery":
       galleryDisplay = "flex";
