@@ -13,14 +13,14 @@
 }
 
 .btn-change-color {
-  background-image: url(/img/btn-color.png);
+  background-image: url(../img/btn-color.png);
   background-repeat: no-repeat;
   background-position: center;
   color: transparent;
 }
 
 .btn-change-stroke {
-  background-image: url(/img/s-bth.png);
+  background-image: url(../img/s-bth.png);
   background-repeat: no-repeat;
   background-position: center;
   color: transparent;
