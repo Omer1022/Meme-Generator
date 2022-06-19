@@ -34,16 +34,17 @@ function openPage(pageName) {
   var galleryDisplay = "none";
   var memeDisplay = "none";
   var aboutDisplay = "none";
+  console.log(pageName);
   switch (pageName) {
     case "gallery":
-      var galleryDisplay = "flex";
+      galleryDisplay = "flex";
       renderImgs();
       break;
     case "meme":
-      var memeDisplay = "flex";
+      memeDisplay = "flex";
       break;
     case "about":
-      var aboutDisplay = "flex";
+      aboutDisplay = "flex";
       break;
     default:
       break;
