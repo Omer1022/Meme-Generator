@@ -29,62 +29,45 @@
         <section class="edit-settings-container flex column">
           <input class="input-meme-text" type="text" value="Text 1" onkeyup="onSetText(this.value)"/>
         </br>
-
           <div class="line-edit-btn-container flex">
             <button class="edit-btn btn-switch" onclick="onSwitchLine()">
               <img src="img/switch.png" /> </button>
-
             <button class="edit-btn btn-add" onclick="onAddLine()">+</button>
-
             <button class="edit-btn btn-remove" onclick="onRemoveLine()">
               <img src="img/remove.png" />
             </button>
-
           </div>
         </br>
-
-
           <div class="text-edit-btn-container grid">
             <button class="edit-btn btn-txt-size-up" onclick="onChangeFontSize(+1)">
               <img src="img/btn-A+.png" /></button>
-
             <button class="edit-btn btn-txt-size-down" onclick="onChangeFontSize(-1)">
               <img src="img/btn-A-.png" /></button>
-
             <button class="edit-btn btn-align-left" onclick="onSetTextAlign({ x: 75})">
             <img src="img/btn-align-left.png" /></button>
-
             <button class="edit-btn btn-align-center" onclick="onSetTextAlign({ x: 200})">
               <img src="img/btn-align-center.png"/></button>
-
             <button class="edit-btn btn-align-right" onclick="onSetTextAlign({ x: 325})">
               <img src="img/btn-align-right.png" /> </button>
-
             <select class="font-select" name="font" onchange="onSetFont(this.value)">
               <option value="impact">Impact</option>
               <option value="poppins">Poppins</option>
             </select>
-
                <button class="edit-btn btn-change-stroke" onclick="onChangeBorderClicked()">
                 <input id="td" type="color" class="input-color-picker" value="#e66465" 
                 oninput="onChangeBorderColor('td')">
               </button>
-
               <button class="edit-btn btn-change-color" onclick="onChangeColorClicked()">
                 <input id="tc" type="color" class="input-color-picker" value="#e66465" 
                 oninput="onChangeColor('tc')">
               </button>
-
           </div>
-
         </br>
-
           <div class="social-btn flex">
             <a href="#"  class="share-btn edit-btn" onclick="shareMeme(this)">Share</a>
             <a href="#"  class="download-btn edit-btn" onclick="onDownloadImg(this)" 
             download="my-meme.jpg">Download</a>
           </div>
-
         </section>
       </main>
 
